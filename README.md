@@ -7,7 +7,11 @@ How to run:
   * ensure mysql is not already running on machine
   * Ensure docker installed and run 
     *  `docker-compose up -d nginx mysql workspace ` from /laradock (will take a while)
-    *  enter docker container using `docker-compose exec workspace bash`
+    * enter mysql container 
+        * `docker-compose exec mysql bash` in '/laradock'
+        * `mysql -u root -p < /docker-entrypoint-initdb.d/createdb.sql`
+        * exit container 
+    *  enter docker container using `docker-compose exec workspace bash` from /laradock
         * and run `composer install`
         * and create db with `php artisan migrate`
     * site should be available at http://localhost   
