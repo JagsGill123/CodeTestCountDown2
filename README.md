@@ -9,8 +9,8 @@ How to run:
     *  `docker-compose up -d nginx mysql workspace ` from /laradock (will take a while)
     * enter mysql container 
         * `docker-compose exec mysql bash` in '/laradock'
-        * `mysql -u root -p < /docker-entrypoint-initdb.d/createdb.sql`
-        * exit container 
+        * `mysql -u root -p < /docker-entrypoint-initdb.d/createdb.sql` pw = root
+        * exit container `exit`
     *  enter docker container using `docker-compose exec workspace bash` from /laradock
         * and run `composer install`
         * and create db with `php artisan migrate`
